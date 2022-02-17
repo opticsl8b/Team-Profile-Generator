@@ -2,4 +2,6 @@ const inquirer = require("inquirer");
 
 const Manager = require('../library/Managers');
 const Engineer = require('../library/Engineer');
-const Intern = requie('../')
+const Intern = require('../library/Intern');
+
+let employee = [];

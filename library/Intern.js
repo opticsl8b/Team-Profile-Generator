@@ -1,3 +1,5 @@
+// Intern Promts
+
 const Employee = require("./Employee");
 
 // add github username for intern

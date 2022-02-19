@@ -1,4 +1,4 @@
-//constructor that could be used universal 
+//Default Question
 class Employee {
     constructor(name, id, email) {
         this.name = name;

@@ -13,7 +13,7 @@ const createHTML = (content) => {
                 ok: true,
                 message: 'HTML File Created!!'
             })
-
+            console.log('HTML File Created!!');
         })
 
     })
@@ -25,12 +25,14 @@ const copyCSS = () => {
             fs.copyFile('./src/style.css', './output/style.css', (err) => {
                 if (err) {
                     reject(err);
+                    console.log('CSS File Copied Fail');
                     return;
                 }
                 resolve({
                     ok: true,
                     message: 'CSS File Copied!!',
                 })
+                console.log('CSS File Copied!!');
             })
         }
     )

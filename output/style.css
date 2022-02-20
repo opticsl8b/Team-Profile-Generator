@@ -1,0 +1,69 @@
+/* Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #337ab9;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 70px;
+    font-weight: 600;
+}
+
+.navbar {
+    margin: 0px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: center;
+    background-color: #fdbe0c;
+    color: #081a6f;
+    margin-bottom: 10px;
+    padding: 0px;
+}
+
+.list-group-item {
+    background: white;
+    padding: 10px 3px;
+}
+
+.col-sm-4 {
+    width: auto;
+}
+
+.card-header {
+    text-align: center;
+}
+
+#managers-container .card-header {
+    background: #ff5050;
+    color: white;
+}
+
+#engineers-container .card-header {
+    background: #05059c;
+    color: white;
+}
+
+#interns-container .card-header {
+    background: limegreen;
+    color: white;
+}
+
+.card-body-wrapper {
+    padding: 10px;
+    background: #babdcc;
+}
+
+.card-body-wrapper li {
+    text-align: center;
+}

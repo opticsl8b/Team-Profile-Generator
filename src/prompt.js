@@ -1,8 +1,8 @@
 const inquirer = require("inquirer");
 
-const Manager = require('../library/Managers');
-const Engineer = require('../library/Engineer');
-const Intern = require('../library/Intern');
+const Manager = require('../lib/Managers');
+const Engineer = require('../lib/Engineer');
+const Intern = require('../lib/Intern');
 
 let employees = [];
 
@@ -116,7 +116,7 @@ const initialisePrompt = () => {
             message: 'Choose employee type',
             choices: ['Manager', 'Engineer', 'Intern'],
         })
-        .then((employeeRole) => {
+        .then(({ employeeRole }) => {
             return sharedPrompts(employeeRole)
                 .then(
                     ({ name, id, email }) => {
@@ -125,7 +125,7 @@ const initialisePrompt = () => {
                             case 'Manager':
                                 return managerPrompt().
                                 then(
-                                    (officeNumber) => {
+                                    ({ officeNumber }) => {
                                         const manager = new Manager(name, id, email, officeNumber);
                                         manager.role = employeeRole;
                                         employees.push(manager);
@@ -133,15 +133,15 @@ const initialisePrompt = () => {
                             case 'Engineer':
                                 return engineerPrompt().
                                 then(
-                                    (github) => {
+                                    ({ github }) => {
                                         const engineer = new Engineer(name, id, email, github);
                                         engineer.role = employeeRole;
                                         employees.push(engineer);
                                     });
-                            case 'Engineer':
+                            case 'Intern':
                                 return internPrompt().
                                 then(
-                                    (school) => {
+                                    ({ school }) => {
                                         const intern = new Intern(name, id, email, school);
                                         intern.role = employeeRole;
                                         employees.push(intern);
@@ -158,7 +158,7 @@ const initialisePrompt = () => {
                     });
                 })
                 .then(
-                    (isContinue) => {
+                    ({ isContinue }) => {
                         if (isContinue) {
                             return initialisePrompt();
                         }

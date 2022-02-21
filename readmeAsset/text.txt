@@ -1,0 +1,36 @@
+
+Manager 1:
+Damian Lewis
+001
+damian@damian.com
+08-66667777
+
+Manager 2:
+Paul Giamatti
+002
+paul@billions.com
+08-66667778
+
+Engineer 1:
+Dan Soder
+003
+dan@billions.com
+dansoder
+
+Engineer 2:
+David Costabile
+004
+david@billions.com
+davidcosta
+
+Intern 1:
+Stephen Kunken
+005
+stephen@billions.com
+UCLA
+
+Intern 2:
+Kelly Aucoin
+006
+kelly@billions.com
+MIT
